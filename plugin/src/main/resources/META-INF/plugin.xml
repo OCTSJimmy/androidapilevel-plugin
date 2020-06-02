@@ -1,7 +1,7 @@
 <idea-plugin version="2">
     <id>com.github.droibit.plugin.androidapilevel</id>
     <name>Android API Level</name>
-    <version>0.1.8</version>
+    <version>0.1.9</version>
     <vendor email="roomful.rooms@gmail.com" url="https://github.com/droibit">Shinya Kumagai</vendor>
 
     <description><![CDATA[
@@ -10,6 +10,7 @@
 
     <change-notes><![CDATA[
       <ul>
+        <li>0.1.9: Add Android Q And Android R</li>
         <li>0.1.8: Add Android Pie.</li>
         <li>0.1.7: Add Android Oreo(MR1).</li>
         <li>0.1.6: Add Android Oreo.</li>
@@ -21,7 +22,7 @@
     </change-notes>
 
     <!-- Android Studio 2.2 and Intellij 2016.1 -->
-    <idea-version since-build="145"/>
+    <idea-version since-build="145" />
 
     <!-- please see https://confluence.jetbrains.com/display/IDEADEV/Plugin+Compatibility+with+IntelliJ+Platform+Products
          on how to target different products -->
@@ -29,24 +30,20 @@
     <depends>com.intellij.modules.lang</depends>
     -->
 
-    <extensions defaultExtensionNs="com.intellij">
-    </extensions>
+    <extensions defaultExtensionNs="com.intellij"></extensions>
 
-    <application-components>
-    </application-components>
+    <application-components></application-components>
 
-    <project-components>
-    </project-components>
+    <project-components></project-components>
 
     <actions>
-        <action id="ShowAndroidLevelAction"
-                class="com.github.droibit.plugin.androidapilevel.ShowAndroidApiLevelAction"
-                text="Android API Level"
-                description="Display Android API level and version name"
-                icon="/icons/icon.png">
-            <add-to-group group-id="MainToolBar" anchor="last"/>
+        <action class="com.github.droibit.plugin.androidapilevel.ShowAndroidApiLevelAction"
+            description="Display Android API level and version name"
+            icon="/icons/icon.png" id="ShowAndroidLevelAction"
+            text="Android API Level">
+            <add-to-group anchor="last" group-id="MainToolBar" />
             <!--<add-to-group group-id="MainToolBar" anchor="last"/>-->
-            <keyboard-shortcut keymap="$default" first-keystroke="shift ctrl alt V"/>
+            <keyboard-shortcut first-keystroke="shift ctrl alt V" keymap="$default" />
         </action>
     </actions>
 

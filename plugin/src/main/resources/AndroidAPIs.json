@@ -1,6 +1,20 @@
 {
   "apis": [
     {
+      "apiLevel": 30,
+      "name": "Android 11",
+      "link": "https://developer.android.com/preview",
+      "platformVersions": ["11.0"],
+      "versionCode": "R"
+    },
+    {
+      "apiLevel": 29,
+      "name": "Android 10",
+      "link": "https://developer.android.com/about/versions/10",
+      "platformVersions": ["10.0"],
+      "versionCode": "Q"
+    },
+    {
       "apiLevel": 28,
       "name": "Pie",
       "link": "https://developer.android.com/about/versions/pie/android-9.0.html",
